@@ -52,5 +52,8 @@ extension PostVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let detailController = UIStoryboard.init(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "DetailVC") as? DetailVC{
+            self.navigationController?.pushViewController(detailController, animated: true)
+        }
     }
 }
