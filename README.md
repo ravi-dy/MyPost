@@ -1,2 +1,1 @@
-# MyPost
-Auther
+# My Post and comment list
