@@ -29,6 +29,7 @@ internal struct API {
 
 enum EndPoint: String, Path {
     case posts
+    case comments
 }
 
 /// 📣`Network Mange Web Service Request`
@@ -57,4 +58,27 @@ class WSManager {
             }
         }.resume()
     }
+    
+    func getComments(_ id : Int,completion: @escaping (Result<[CommentModel], Error>) -> ()){
+
+        guard let url = URL(string: API.URL.BASEURL+EndPoint.comments.rawValue + "?postId=\(id)") else {return}
+
+        let request = URLRequest(url: url)
+
+        URLSession.shared.dataTask(with: request) { (data, response, err) in
+            if let err = err{
+                completion(.failure(err))
+            } else {
+                if let data = data {
+                    do{
+                        let response = try JSONDecoder().decode([CommentModel].self, from: data)
+                        completion(.success(response))
+                    } catch let jsonError{
+                        completion(.failure(jsonError))
+                    }
+                }
+            }
+        }.resume()
+    }
+
 }

@@ -58,10 +58,11 @@ extension PostVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let postCell = tableView.dequeueReusableCell(withIdentifier: Const.prototypeCell, for: indexPath)
         if(searchActive) {
-            let model = filterPost[indexPath.row]
-            postCell.textLabel?.text = model.title
-            postCell.detailTextLabel?.text = model.body
-
+            if filterPost.count > 0 {
+                let model = filterPost[indexPath.row]
+                postCell.textLabel?.text = model.title
+                postCell.detailTextLabel?.text = model.body
+            }
         } else {
             let model = postVM.post(at: indexPath.row)
             postCell.textLabel?.text = model.title

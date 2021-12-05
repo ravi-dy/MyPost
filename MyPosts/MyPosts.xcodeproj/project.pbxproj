@@ -17,6 +17,7 @@
 		A9F898FB275CBFF500609C7F /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F898F8275CBFF500609C7F /* Path.swift */; };
 		A9F898FC275CBFF500609C7F /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F898F9275CBFF500609C7F /* WSManager.swift */; };
 		A9F898FE275CC04A00609C7F /* PostVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F898FD275CC04A00609C7F /* PostVM.swift */; };
+		A9F89900275CC4BE00609C7F /* DetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F898FF275CC4BE00609C7F /* DetailVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A9F898F8275CBFF500609C7F /* Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		A9F898F9275CBFF500609C7F /* WSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
 		A9F898FD275CC04A00609C7F /* PostVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVM.swift; sourceTree = "<group>"; };
+		A9F898FF275CC4BE00609C7F /* DetailVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A9F898E9275CBEF700609C7F /* DetailVC.swift */,
+				A9F898FF275CC4BE00609C7F /* DetailVM.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				A9F898FB275CBFF500609C7F /* Path.swift in Sources */,
 				A9F898FE275CC04A00609C7F /* PostVM.swift in Sources */,
 				A9F898FA275CBFF500609C7F /* Model.swift in Sources */,
+				A9F89900275CC4BE00609C7F /* DetailVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
